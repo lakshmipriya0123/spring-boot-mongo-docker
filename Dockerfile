@@ -5,6 +5,10 @@ RUN apk update && apk add /bin/sh
 
 RUN mkdir -p /opt/app
 ENV PROJECT_HOME /opt/app
+ENV rollbackupdate=true
+COPY docker-entry.sh .
+RUN chmod +x docker-entry.sh .
+ENTRYPOINT ["/docker-entry.sh"]
 
 COPY target/spring-boot-mongo-1.0.jar $PROJECT_HOME/spring-boot-mongo.jar
 
