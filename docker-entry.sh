@@ -1,2 +1,3 @@
 #!/bin/bash
-echo $rollbackupdate
+echo "Enter rollback update value:"
+read rollbackupdate
