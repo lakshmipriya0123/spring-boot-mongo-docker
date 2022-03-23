@@ -5,7 +5,7 @@ RUN apk update && apk add /bin/sh
 
 RUN mkdir -p /opt/app
 ENV PROJECT_HOME /opt/app
-ENV rollbackupdate=true
+ENV var rollbackupdate
 COPY docker-entry.sh .
 RUN chmod +x docker-entry.sh .
 ENTRYPOINT ["/docker-entry.sh"]
