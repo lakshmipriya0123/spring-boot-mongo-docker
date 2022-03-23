@@ -28,6 +28,6 @@ steps:
   inputs:
     containerRegistry: 'docker-exp'
     repository: 'lakshmi9822/first'
-    command: 'buildAndPush'
-    Dockerfile: '**/AzureDockerfile'
-    
+    command: 'build'
+    Dockerfile: '**/Dockerfile'
+ 
