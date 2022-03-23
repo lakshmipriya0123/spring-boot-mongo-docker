@@ -5,6 +5,10 @@
 
 trigger:
 - master
+variables:
+- name: rollbackupdate
+  value: true
+  
 
 pool:
   vmImage: ubuntu-latest
