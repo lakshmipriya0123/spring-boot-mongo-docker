@@ -4,7 +4,6 @@ FROM openjdk:8-alpine
 RUN apk update && apk add /bin/sh
 RUN mkdir -p /opt/app
 ENV PROJECT_HOME /opt/app
-FROM openjdk:11
 ENV testvariable=lakshmi
 ENV appVersion=2.8
 CMD echo "Testing liquibase $testvariable"
