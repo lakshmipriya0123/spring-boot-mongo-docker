@@ -6,7 +6,7 @@ RUN mkdir -p /opt/app
 ENV PROJECT_HOME /opt/app
 FROM openjdk:11
 ENV testvariable=lakshmi
-ENV appVersion= 10
+ENV appVersion=2.8
 CMD echo "Testing liquibase $testvariable"
 CMD echo "Testing liquibases $appVersion"
 COPY target/spring-boot-mongo-1.0.jar $PROJECT_HOME/spring-boot-mongo.jar
