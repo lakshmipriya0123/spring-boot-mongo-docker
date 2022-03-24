@@ -4,11 +4,11 @@ FROM openjdk:8-alpine
 RUN apk update && apk add /bin/sh
 RUN mkdir -p /opt/app
 ENV PROJECT_HOME /opt/app
-ENV variable rollbackupdate
-COPY docker-entry.sh .
-RUN chmod +x docker-entry.sh .
-ENTRYPOINT ["/docker-entry.sh"]
-
+FROM openjdk:11
+ENV testvariable=lakshmi
+ENV appVersion= 10
+CMD echo "Testing liquibase $testvariable"
+CMD echo "Testing liquibases $appVersion"
 COPY target/spring-boot-mongo-1.0.jar $PROJECT_HOME/spring-boot-mongo.jar
 
 WORKDIR $PROJECT_HOME
