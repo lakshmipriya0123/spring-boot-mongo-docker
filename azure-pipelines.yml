@@ -32,6 +32,7 @@ steps:
   inputs:
     containerRegistry: 'docker-exp'
     repository: 'lakshmi9822/first'
-    command: 'build'
+    command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
+
  
